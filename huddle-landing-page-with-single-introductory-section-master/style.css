@@ -1,0 +1,213 @@
+*{
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Open Sans', sans-serif;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: url(./images/bg-desktop.svg);
+    background-color: hsl(257, 40%, 49%);
+    background-repeat: no-repeat;
+}
+
+.container{
+    width: 95%;
+    margin: 4.8em auto;
+}
+
+.column{
+    display: flex;
+}
+
+.col-2{
+    width: 60%;
+    margin-left: 3em;
+    align-self: center;
+    color: hsl(0, 0%, 100%);
+}
+
+.col-2 h3{
+    margin-bottom: 25px;
+    font-size: 3rem;
+}
+
+button{
+    padding: 12px 45px;
+    border-radius: 22px;
+    font-size: 1rem;
+    font-weight: 500;
+    color:  hsl(257, 40%, 49%);
+    background-color: hsl(0, 0%, 100%);
+    border: none;
+    box-shadow: 3px 3px 5px hsla(0, 0%, 0%, 0.2);
+}
+
+button:hover{
+    color:  hsl(0, 0%, 100%);
+    background-color: hsl(300, 69%, 71%);
+}
+
+.socials{
+    display: grid;
+    grid-template-columns: repeat(3,4em);
+    align-self: flex-end;
+}
+
+.fa-brands{
+    height: 55px;
+    width: 55px;
+    color: white;
+    padding: 1.2em .4em .2em .41em;
+    margin: .1em;
+    border: 2px solid white;
+    border-radius: 100%;
+}
+
+.fa-brands:hover{
+    border: 3px solid hsl(300, 69%, 71%);
+    color: hsl(300, 69%, 71%);
+}
+
+@media screen and (max-width: 376px){
+    body{
+        background-image: url(./images/bg-mobile.svg);
+        background-color: hsl(257, 40%, 49%);
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    .container{
+        margin: 2em 1em;
+    }
+
+    .col-1{align-self: center;}
+
+    .illustration{
+        width: 200px;
+        margin-left: 1em;
+    }
+
+    .logo{
+        width: 150px;
+        height: 60px;
+        margin-left: 1em;
+    }
+
+    .col-2{
+        width: 80%;
+        text-align: center;
+        margin-right: 3em;
+    }
+
+    .col-2 h3{
+        margin-top: 1.5em ;
+        font-size: 1.5rem;
+    }
+
+    button{
+        padding: 12px 80px;
+        border-radius: 22px;
+        font-size: .8rem;
+        font-weight: 500;
+        color:  hsl(257, 40%, 49%);
+        background-color: hsl(0, 0%, 100%);
+        border: none;
+        box-shadow: 3px 3px 5px hsla(0, 0%, 0%, 0.2);
+    }
+
+    .socials{
+        display: grid;
+        grid-template-columns: repeat(3,2.25em);
+        align-self: center;
+    }
+
+    .fa-brands{
+        height: 30px;
+        width: 30px;
+        color: white;
+        font-size: 1rem;
+        padding: 0.9em .3em .15em .31em;
+        border: 1px solid white;
+        border-radius: 100%;
+    }
+}
+
+@media screen and (max-width: 426px){       
+    body{
+        background-image: url(./images/bg-mobile.svg);
+        background-color: hsl(257, 40%, 49%);
+        background-size: 100vw;
+        background-repeat: no-repeat;
+    }
+
+    .container{
+        margin: 2em 1em;
+    }
+
+    .illustration{
+        width: 350px;
+        margin-left: 1em;
+    }
+
+    .logo{
+        width: 150px;
+        height: 60px;
+        margin-left: 1em;
+    }
+
+    .col-2{
+        width: 80%;
+        text-align: center;
+        margin-right: 3em;
+    }
+
+    .col-2 h3{
+        margin-top: 1.5em ;
+        font-size: 1.5rem;
+    }
+
+    button{
+        padding: 12px 80px;
+        border-radius: 22px;
+        font-size: .8rem;
+        font-weight: 500;
+        color:  hsl(257, 40%, 49%);
+        background-color: hsl(0, 0%, 100%);
+        border: none;
+        box-shadow: 3px 3px 5px hsla(0, 0%, 0%, 0.2);
+    }
+
+    .socials{
+        display: grid;
+        grid-template-columns: repeat(3,2.25em);
+        align-self: center;
+    }
+
+    .fa-brands{
+        height: 30px;
+        width: 30px;
+        color: white;
+        font-size: 1rem;
+        padding: 0.9em .3em .15em .31em;
+        border: 1px solid white;
+        border-radius: 100%;
+    }
+    
+}
+
+@media screen and (max-width: 769px){
+    .column{
+        flex-direction: column;
+    }
+
+    .col-2{
+        margin-top: .8em;
+        width: 80%;
+    }
+
+    .socials{
+        margin-top: 6em;
+        align-self: center;
+    }
+    
+}
