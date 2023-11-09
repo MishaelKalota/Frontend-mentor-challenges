@@ -1,0 +1,107 @@
+*{
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;}
+
+body{
+    background-color: hsl(30, 38%, 92%);
+}
+.container{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.cards{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(200px,320px));
+    grid-auto-rows: 500px auto;
+    justify-content: center;
+}
+
+.size{
+    height: 100%;
+    width: 100%;
+    border-radius: 1em 0 0 1em ;
+}
+
+.item-2{
+    background-color: hsl(0, 0%, 100%);
+    padding: 1em 3em ;
+    display: flex;
+    flex-direction: column;
+    border-radius: 0 1em 1em 0 ;
+}
+
+.item-2 h4{
+    font-weight: 100;
+    color: hsl(228, 12%, 48%);
+}
+
+.item-2 h2{
+    font-weight: 900;
+    font-size: 2.2rem;
+    font-family: 'Fraunces', serif;
+    margin-top: 0;
+    margin-bottom: .3em;
+}
+
+#description{
+    font-size: .8rem;
+    line-height: 1.5em;
+}
+
+.item-2 p{
+    color: hsl(228, 12%, 48%);
+}
+
+.new-p{
+    font-size: 2rem;
+    color: hsl(158, 36%, 37%);
+    font-family: 'Fraunces', serif;
+}
+.btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+button{
+    width: 100%;
+    background-color: hsl(158, 36%, 37%);
+    color: hsl(0, 0%, 100%);
+    font-weight: 600;
+    padding: 1.2em 0;
+    margin-top: 1em;
+    border: none;
+    border-radius: .6em;
+}
+
+button:hover{
+    background-color: hsl(156, 42%, 18%);
+}
+
+.attribution{align-self: center;}
+
+
+@media screen and (max-width: 655.5px) {
+    .cards{
+        margin: 5em 0;
+        grid-auto-rows: 220px auto;
+    }
+    .size{
+        border-radius: 1em 1em 0 0 ;
+    }
+    .item-2{
+        border-radius: 0 0 1em 1em ;
+        padding: 1em 2em ;
+    }
+    .item-2 h4{font-size: .7rem;}
+    .item-2 h2{font-size: 1.6rem;}
+    .price{
+        height: 50px;
+        font-size: .9rem;
+    }
+    .new-p{font-size: 1.8rem;}
+    #description{margin-bottom: 0;}
+    button{padding: 1em 0;}
+
+}
