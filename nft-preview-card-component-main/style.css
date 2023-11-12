@@ -1,0 +1,62 @@
+*{
+    font-family: 'Fraunces', serif;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Outfit', sans-serif;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: hsl(217, 54%, 11%);
+}
+
+.card{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(150px,250px));
+    grid-auto-rows: auto;
+    background-color: hsl(216, 50%, 16%);
+    border-radius: 15px;
+    padding: 1em;
+}
+
+.equilibrium img{border-radius: 12px;}
+
+.equilibrium h3{color: hsl(0, 0%, 100%);}
+
+.equilibrium p{
+    font-weight: 300;
+    color: hsl(215, 51%, 70%);
+    font-size: .9rem;
+}
+
+.balance{
+    display: flex;
+    align-items: center;
+    font-size: .8rem;
+    color: hsl(178, 100%, 50%);
+    padding-bottom: .5em;
+}
+
+.clock{color: hsl(215, 51%, 70%)}
+
+.bio{
+    width: inherit;
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+    font-weight: 400;
+    border-top: .01em solid hsl(215, 32%, 27%);
+    padding-top: .5em;
+}
+
+.bio p{color: hsl(215, 51%, 70%);}
+
+.white{color: hsl(0, 0%, 100%);}
+
+.bio img{
+    border: 2px solid white;
+    border-radius: 100%;
+}
+
