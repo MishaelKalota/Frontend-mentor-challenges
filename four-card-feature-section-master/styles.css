@@ -1,0 +1,146 @@
+*{
+    font-family: 'Fraunces', serif;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Nova Square', sans-serif;
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Outfit', sans-serif;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+.container-1{
+    display: grid;
+    grid-template-columns: 1fr;
+    text-align: center;
+    margin-bottom: 2em;
+}
+
+.content{justify-self: center;}
+
+.content h1{color: hsl(234, 12%, 34%);}
+
+.content p{
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: -25em;
+    color: hsl(229, 6%, 66%);}
+
+span{font-weight: 400;}
+
+span::after{
+    content: "\a";
+    white-space: pre;
+}
+
+.container-2{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    overflow-x: hidden;
+}
+
+.card{
+    display:flex;
+    flex-direction: column;
+    justify-self: center;
+    flex-shrink: 1;
+    max-width: 350px;
+    height: 250px;
+    margin: 2em;
+    padding: 1em;
+    border-radius: 6px;
+    box-shadow: 0 0 10px 1px hsl(229, 6%, 66%);
+}
+.center-cards{justify-self: center;}
+
+.right-card{
+    align-self: center;
+    justify-self: start;
+}
+.left-card{
+    align-self: center;
+    justify-self: end;
+}
+
+.card img{
+    padding-top: 1em;
+    align-self: flex-end;
+}
+
+.card h4{
+    color: hsl(234, 12%, 34%);
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.card p{
+    color: hsl(229, 6%, 66%);
+    margin-top: -1em;
+    font-size: .8rem;
+    padding-right: 1em;
+}
+
+.card-1{
+    align-self: center;
+    border-top: solid 5px hsl(180, 62%, 55%);
+    padding-right: 2em;
+    padding-bottom: 2em;
+}
+
+.card-2{
+    grid-area: teambuilder;
+    border-top: solid 5px hsl(0, 78%, 62%);
+    padding-right: 2em;
+    padding-bottom: 2em;
+}
+
+.card-3{
+    grid-area: karma;
+    border-top: solid 5px hsl(34, 97%, 64%);
+    padding-right: 2em;
+    padding-bottom: 2em;
+}
+
+.card-4{
+    align-self: center;
+    border-top: solid 5px hsl(212, 86%, 64%);
+    padding-right: 2em;
+    padding-bottom: 2em;
+}
+
+@media screen and (max-width: 970px) {
+    .container-2{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .card{
+        justify-self: center;
+        max-width: 400px;
+        height: auto;
+        padding: .2em 1em 1em 1em;
+    }
+
+    .card-1{margin-bottom: 0em;}
+
+    .card-1 p, .card-1 h4{margin-right: 4.5em;}
+
+    .card-4{margin-top: 0em;}
+
+    .right-card{justify-self: center;}
+
+    .left-card{justify-self: center;}
+}
+
+@media screen and (max-width: 477px) {
+    .container-1{margin-top: 4em;}
+    .content h1{font-size: 1.5rem;}
+
+    .content p{
+        margin: 0em 2em;
+        font-size: .8rem;
+    }
+
+    .card-1 p, .card-1 h4{margin-right: 0em;}
+}
