@@ -1,0 +1,540 @@
+html{box-sizing: border-box;}
+*,*::before,*::after{box-sizing: inherit;}
+
+body{
+    margin: 0;
+    padding: 0;
+}
+
+/*Header Styles*/
+
+header{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    padding: 4em 3em 0 3em;
+}
+
+nav{
+    max-width: 100%;
+    justify-self: end;
+}
+
+nav ul li{display: inline;}
+
+nav ul li a:link{
+    font-family: "Raleway", sans-serif;
+    color: hsl(243, 87%, 12%);
+    font-size: 1.2rem;
+    text-decoration: none;
+}
+
+nav ul li:nth-child(2){padding: 0 2em;}
+
+/*General section styles*/
+
+.sect{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding-left: 3em;
+    padding-right: 3em;
+}
+
+.sect-1 img{max-width: 90%}
+
+/*Sect-1 Styles*/
+.sect-1{
+    height: 100dvh;
+    background-image: url(./images/bg-curve-desktop.svg);
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: 100dvw;
+    padding-bottom: 10em;
+    color: hsl(243, 87%, 12%);
+}
+
+.intro,.intro-pic{align-self: center;}
+
+.intro h1{
+    font-size: 2.8rem;
+    font-family: "Raleway", sans-serif;
+}
+
+.intro p{
+    font-family: "Open Sans", sans-serif;
+    font-size: 1.3rem;
+    font-weight: 500;
+}
+
+.intro form input:not([type="submit"]){
+    width: 50%;
+    height: 50px;
+    font-size: 1rem;
+    border: 1px solid hsl(0, 0%, 0%);
+}
+
+.intro form input:not([type="email"]){
+    width: 30%;
+    height: 50px;
+    font-family: "Raleway", sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    color: hsl(0, 0%, 100%);
+    background-color: hsl(224, 93%, 58%);
+    border: none;
+}
+
+.intro form input:not([type="email"]):hover{opacity: 0.6;}
+
+.error {
+    color: red;
+    font-family: "Open Sans", sans-serif;
+    font-size: 1rem;
+}
+
+.error span::before {
+    content: url("./img/error.svg");
+    display: inline-block;
+    vertical-align: baseline;
+    margin: .5em 0;
+}
+  
+.error span { display: none; }
+  
+.dirty:invalid + .error span {
+    display: inline;
+}
+  
+:is(input).dirty:invalid:focus {
+    outline-color: red;
+}
+  
+
+.intro form input{border-radius: 2px;}
+
+.intro-pic{text-align: center;}
+
+/*Sect-2 Styles*/
+
+.sect-2{
+    height: 90dvh;
+    background-color: #f8f8fe;
+    color: hsl(243, 87%, 12%);
+}
+
+.sect-2 img{max-width: 80%;}
+
+.center{align-self: start;}
+
+.center h2{
+    font-size: 2.5rem;
+    font-family: "Raleway", sans-serif;
+}
+
+.center p{
+    font-family: "Open Sans", sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.center a:link{
+    font-family: "Open Sans", sans-serif;
+    font-size: 1rem;
+    color: hsl(170, 45%, 43%);
+}
+
+.center a:visited{color: hsl(170, 45%, 43%);}
+
+.center a:hover{opacity: 0.7;}
+
+.center-pic{
+    align-self: start;
+    text-align: center;
+}
+
+.card{
+    margin-top: 3em;
+    width: 50%;
+    background-color: hsl(0, 0%, 100%);
+    box-shadow: 0 0 10px 1px hsl(0, 0%, 76%);
+    padding: 1em;
+    border-radius: 10px;
+}
+
+.card p{
+    margin-top: 0;
+    font-family: "Raleway", sans-serif;
+    font-size: .85rem;
+    font-weight: 600;
+    line-height: 1.6;
+}
+
+.card img{
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    margin-right: 1em;
+}
+
+.card-foot{
+    max-width: 100%;
+    display: flex;
+    align-items: flex-end;
+    margin-bottom: 1em;
+}
+
+.card-foot p{
+    font-weight: 800;
+    font-size: .7rem;
+    margin: 0;
+}
+
+.ch-color{font-weight: 400;}
+
+/*Sect-3 Styles*/
+
+.sect-3{
+    height: 50dvh;
+    background-color: hsl(238, 22%, 44%);
+    color: hsl(0, 0%, 100%);
+}
+
+.access{align-self: center;}
+
+.access h3{
+    font-family: "Raleway", sans-serif;
+    font-size: 2.5rem;
+}
+
+.access p{
+    margin-top: -1em;
+    font-family: "Open Sans", sans-serif;
+    font-size: 1.1rem;
+    max-width: 80%;
+}
+
+.access-form{align-self: center;}
+
+.access-form form input:not([type="submit"]){
+    width: 80%;
+    height: 50px;
+    font-size: 1rem;
+    border: none;
+}
+
+.access-form form .error{
+    color: hsl(0, 0%, 100%);
+    font-family: "Open Sans", sans-serif;
+    font-size: 1rem;
+    margin-top: .5em;
+}
+
+.error span::before {
+    content: url("./img/error.svg");
+    display: inline-block;
+    vertical-align: baseline;
+    margin: .7em 0;
+}
+  
+.error span { display: none; }
+  
+.dirty:invalid + .error span {
+    display: inline;
+}
+  
+:is(input).dirty:invalid:focus {
+    outline-color: red;
+}
+
+
+.access-form form input:not([type="email"]){
+    width: 35%;
+    height: 50px;
+    font-size: 1rem;
+    font-weight: 700;
+    color: hsl(0, 0%, 100%);
+    background-color: hsl(224, 93%, 58%);
+    border: none;
+}
+
+.access-form form input:not([type="email"]):hover{background-color: hsl(221, 100%, 71%);}
+
+.access-form form input{border-radius: 2px;}
+
+/*Footer Styles*/
+
+footer{
+    height: 50dvh;
+    display: grid;
+    grid-template-columns: 2fr repeat(3,1fr);
+    background-color: hsl(243, 87%, 12%);
+    padding-left: 3em;
+    padding-right: 3em;
+    font-family: "Open Sans", sans-serif;
+}
+
+.alignment{
+    display: flex;
+    align-items: center;
+}
+
+.contact-info{margin-top: 4em;}
+
+.alignment p{
+    padding-left: .5em;
+    color: hsl(0, 0%, 100%);
+}
+
+.more-details{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.more-details a:link{
+    color: hsl(0, 0%, 100%);
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.more-details a:visited{color: hsl(0, 0%, 100%);}
+
+.more-details a:hover{color: hsl(224, 93%, 58%);}
+
+.socials{
+    height: 80%;
+    display: flex;
+    align-items: center;
+}
+
+.fa-brands{
+    font-size: 1.2rem;
+    color: hsl(0, 0%, 100%);
+    border: 1px solid hsl(0, 0%, 100%);
+    border-radius: 100%;
+}
+
+.fa-brands:hover{
+    color: hsl(224, 93%, 58%);
+    border: 1px solid  hsl(224, 93%, 58%);
+}
+
+.fa-facebook-f{padding: .3em .5em;}
+
+.fa-twitter{
+    margin: 0 .7em;
+    padding: .3em .3em;
+}
+
+.fa-instagram{padding: .3em .4em;}
+
+/*Media Queries*/
+
+@media screen and (max-width: 1250px) {
+
+    .card{width: 90%;}  
+
+    .access-form form input:not([type="email"]){width: 60%;}
+}
+
+@media screen and (max-width: 925px) {
+
+    .sect{grid-template-columns: 1fr;}
+
+    header{grid-template-columns: 25% 1fr;}
+
+    header img{
+        width: 100%;
+        align-self: center;
+    }
+
+    nav ul li a:link{font-size: .9rem;}
+
+    .sect-1{
+        margin-top: 3em;
+        padding-bottom: 50em;
+    }
+
+    .intro-pic{
+        width: 70%;
+        grid-row: 1/2;
+        justify-self: center;
+    }
+
+    .intro h1{
+        font-size: 2rem;
+        text-align: center;
+    }
+    
+    .intro p{
+        font-size: 1rem;
+        text-align: center;
+    }
+
+    .intro form{text-align: center;}
+
+    .intro form input:not([type="submit"]){
+        width: 80%;
+        margin-top: 1em;
+    }
+    
+    .intro form input:not([type="email"]){
+        margin-top: 1em;
+        margin-left: 0;
+        width: 80%;
+    }
+
+    .sect-2{height: fit-content;}
+
+    .center-pic{
+        width: 70%;
+        justify-self: center;
+        grid-row: 1/2;
+    }
+
+    .center{text-align: center;}
+
+    .center h2{font-size: 1.5rem;}
+    
+    .center p{
+        font-size: 1rem;
+        text-align: left;
+    }
+    
+    .center a{font-size: 1rem;}
+
+    .card{
+        width: 70%;
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+        margin: 5em auto;
+    }
+
+    .card p{
+        font-size: .8rem;
+        font-weight: 600;
+    }
+
+    .card .open-q{text-align: start;}
+
+    .card img{
+        width: 25px;
+        height: 25px;
+        border-radius: 100%;
+        margin-right: 1em;
+    }
+
+    .card-foot p{
+        font-weight: 800;
+        font-size: .6rem;
+        margin: 0;
+    }
+
+    .access{text-align: center;}
+
+    .access h3{font-size: 1.5rem;}
+
+    .access p{
+        max-width: 100%;
+        font-size: .9rem;
+    }
+
+    .access-form{align-self: start;}
+
+    .access-form form{
+        text-align: center;
+        margin-top: 1em;
+    }
+
+    .access-form form input:not([type="submit"]){
+        width: 80%;
+        height: 30px;
+        font-size: .9rem;
+    }
+
+    .access-form form input:not([type="email"]){
+        width: 80%;
+        height: 30px;
+        font-size: .9rem;
+    }  
+    
+    footer{
+        grid-template-columns: 1fr;
+        height: fit-content;
+    }
+
+    .contact-info p{font-size: .9rem;}
+
+    .socials{
+        justify-content: center;
+        margin-bottom: 8em;
+    }
+}
+
+@media screen and (max-width: 500px) {
+
+    header{padding: 1em 2em 0 2em;}
+
+    .sect{
+        padding-left: 2em;
+        padding-right: 2em;
+    }
+
+    .sect-1{
+        background-image: url(./images/bg-curve-mobile.svg);
+        background-repeat: no-repeat;
+        background-position: bottom;
+        background-size: 100dvw;
+        padding-bottom: 45em;
+    }
+
+    footer{
+        padding-left: 2em;
+        padding-right: 2em;
+    }
+}
+
+@media screen and (max-width: 400px) {
+
+    nav ul li a:link{font-size: .7rem;}
+
+    nav ul li:nth-child(2){padding: 0 1em;}
+    
+    .sect-1{padding-bottom: 10em;}
+
+    .intro h1{font-size: 1.5rem;}
+
+    .intro p{font-size: .9rem;}
+
+    .intro form input:not([type="submit"]){
+        width: 100%;
+        height: 40px;
+    }
+
+    .intro form input:not([type="submit"])::placeholder{font-size: .8rem;}
+    
+    .intro form input:not([type="email"]){
+        width: 100%;
+        height: 40px;
+    }
+
+    .card{width: 100%;}
+
+    .sect-3{height: 50dvh;}
+
+    .access-form form input:not([type="submit"]){
+        width: 90%;
+        height: 40px;
+        font-size: .8rem;
+    }
+
+    .access-form form input:not([type="email"]){
+        width: 90%;
+        height: 40px;
+        font-size: .8rem;
+        margin-bottom: 5em;
+    }
+}
+
+
+
